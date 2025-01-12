@@ -7,7 +7,8 @@ This is a full-stack web application that displays financial data using a React 
 ## **Deployed Application**
 - **Frontend**: [https://financial-data-app-beta.vercel.app/](https://financial-data-app-beta.vercel.app/)
 - **Backend**: [https://rahul-financial-data-app.onrender.com](https://rahul-financial-data-app.onrender.com)
-
+- note: If there are no incoming requests to your backend for 15 minutes, Render will automatically stop the service to save resources. 
+The backend will restart automatically when a new request is received, but this can cause a 50 second delay for the first request (cold start).
 ---
 
 ## **Features**
