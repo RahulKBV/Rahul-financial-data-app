@@ -13,8 +13,8 @@ const App = () => {
   });
   const [sortConfig, setSortConfig] = useState({ key: "date", direction: "ascending" });
 
-  // Fetch data from the backend
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  // Backend URL
+  const API_BASE_URL = "https://rahul-financial-data-app.onrender.com";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,11 +39,11 @@ const App = () => {
 
         const result = await response.json();
         console.log("Data received from backend:", result);
-        setData(result.data || []); // Set data (ensure it's always an array)
+        setData(result.data || []); // Ensure data is always an array
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data from backend:", error);
-        setLoading(false); // Ensure loading stops even if there’s an error
+        setLoading(false); // Stop the loading spinner in case of errors
       }
     };
 
